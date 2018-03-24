@@ -39,7 +39,13 @@ public class Home extends HttpServlet {
                 out.println("<head>");
                     out.println("<!-- CSS Bootstrap -->");
                     out.println("<link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css\" integrity=\"sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm\" crossorigin=\"anonymous\">");
-                    out.println("<link rel=\"icon\" href=\"imagens/favicon/favicon.png\">");
+                    
+                    out.println("<!-- CSS -->");
+                    out.println("<link rel=\"stylesheet\" href=\"css/css.css\">");
+                    
+                    out.println("<!-- Favicon -->");
+                    out.println("<link rel=\"icon\" href=\"img/favicon/dollar.gif\">");
+                    
                     out.println("<title>Juros.calc</title>");     
                     
                     out.println("<!-- Responsive meta tag Bootstrap -->");
@@ -71,44 +77,46 @@ public class Home extends HttpServlet {
                     out.println("<!-- Image caps Bootstrap -->");
                     out.println(
                         "<div class=\"card mb-3\">\n" +
-                        "  <img class=\"card-img-top\" src=\"...\" alt=\"Card image cap\">\n" +
+                        "  <img class=\"card-img-top\" src=\"img/banner/dollar_banner.png\" alt=\"crescimento do dinheiro\" width=\"100%\">\n" +
                         "  <div class=\"card-body\">\n" +
-                        "    <h5 class=\"card-title\">Card title</h5>\n" +
-                        "    <p class=\"card-text\">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>\n" +
-                        "    <p class=\"card-text\"><small class=\"text-muted\">Last updated 3 mins ago</small></p>\n" +
+                        "    <h5 class=\"card-title\">Juros.calc</h5>\n" +
+                        "    <p class=\"card-text\">O Juros.calc é um site bem esperto feito em Java EE com o objetivo de realizar o cálculo de juros simples e composto. E apesar de parecer e me comportar como uma página HTML, na verdade sou um Servlet! Quer saber mais sobre Servlets? Então <a href=\"https://pt.wikipedia.org/wiki/Servlet\" target=\"_blank\">clica aqui</a>!</p>\n" +
                         "  </div>\n" +
                         "</div>");
                     
                     out.println("<!-- Alerts Bootstrap -->");
                     out.println(
                         "<div class=\"alert alert-light\" role=\"alert\">\n" +
-                        "  Conheça os nossos desenvolvedores.\n" +
+                        "  O Juros.calc foi desenvolvido por: \n" +
                         "</div>");
                     out.println("<!-- Card groups Bootstrap -->");
                     out.println(
                         "<div class=\"card-group\">\n" +
                         "  <div class=\"card\">\n" +
-                        "    <img class=\"card-img-top\" src=\"...\" alt=\"Card image cap\">\n" +
+                        "    <center><img class=\"imgdev\" src=\"img/devs/junior.png\" alt=\"foto do desenvolvedor Junior Camargo, foto em preto e branco\">\n</center>" +
                         "    <div class=\"card-body\">\n" +
-                        "      <h5 class=\"card-title\">Card title</h5>\n" +
-                        "      <p class=\"card-text\">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>\n" +
-                        "      <p class=\"card-text\"><small class=\"text-muted\">Last updated 3 mins ago</small></p>\n" +
+                        "      <h5 class=\"card-title\">Junior</h5>\n" +
+                        "      <p class=\"card-text\">Aficionado por novas tecnologias, não perde nenhuma WWDC, Google I/O e Build. Curte cerveja e ficção científica.</p>\n" +
+                        "      <p class=\"card-text\"><small class=\"text-muted\"><a href=\"https://github.com/junioracamargo\" target=\"_blank\">GitHub</a></small></p>\n" +
+                        "      <p class=\"card-text\"><small class=\"text-muted\"><a href=\"https://linkedin.com/in/junioracamargo\" target=\"_blank\">LinkedIn</a></small></p>\n" +        
                         "    </div>\n" +
                         "  </div>\n" +
                         "  <div class=\"card\">\n" +
-                        "    <img class=\"card-img-top\" src=\"...\" alt=\"Card image cap\">\n" +
+                        "    <center><img class=\"imgdev\" src=\"...\" alt=\"Card image cap\">\n</center>" +
                         "    <div class=\"card-body\">\n" +
-                        "      <h5 class=\"card-title\">Card title</h5>\n" +
+                        "      <h5 class=\"card-title\">Willians</h5>\n" +
                         "      <p class=\"card-text\">This card has supporting text below as a natural lead-in to additional content.</p>\n" +
-                        "      <p class=\"card-text\"><small class=\"text-muted\">Last updated 3 mins ago</small></p>\n" +
+                        "      <p class=\"card-text\"><small class=\"text-muted\"><a href=\"https://github.com/wiliansaugusto\" target=\"_blank\">GitHub</a></small></p>\n" +
+                        "      <p class=\"card-text\"><small class=\"text-muted\"><a href=\"https://www.linkedin.com/in/willians-tadeu-atan%C3%A1zio-augusto-629791b0\" target=\"_blank\">LinkedIn</a></small></p>\n" +   
                         "    </div>\n" +
                         "  </div>\n" +
                         "  <div class=\"card\">\n" +
-                        "    <img class=\"card-img-top\" src=\"...\" alt=\"Card image cap\">\n" +
+                        "    <center><img class=\"imgdev\" src=\"...\" alt=\"Card image cap\">\n</center>" +
                         "    <div class=\"card-body\">\n" +
-                        "      <h5 class=\"card-title\">Card title</h5>\n" +
+                        "      <h5 class=\"card-title\">Igor</h5>\n" +
                         "      <p class=\"card-text\">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>\n" +
-                        "      <p class=\"card-text\"><small class=\"text-muted\">Last updated 3 mins ago</small></p>\n" +
+                        "      <p class=\"card-text\"><small class=\"text-muted\"><a href=\"https://github.com/iitenorio\" target=\"_blank\">GitHub</a></small></p>\n" +
+                        "      <p class=\"card-text\"><small class=\"text-muted\"><a href=\"https://linkedin.com/in/junioracamargo\" target=\"_blank\">LinkedIn</a></small></p>\n" +   
                         "    </div>\n" +
                         "  </div>\n" +
                         "</div>");
@@ -124,23 +132,33 @@ public class Home extends HttpServlet {
                         "  <div class=\"col-sm-6\">\n" +
                         "    <div class=\"card\">\n" +
                         "      <div class=\"card-body\">\n" +
-                        "        <h5 class=\"card-title\">Special title treatment</h5>\n" +
-                        "        <p class=\"card-text\">With supporting text below as a natural lead-in to additional content.</p>\n" +
-                        "        <a href=\"#\" class=\"btn btn-primary\">Go somewhere</a>\n" +
+                        "        <h5 class=\"card-title\">Juros Simples</h5>\n" +
+                        "        <p class=\"card-text\">Digite os dados solicitados a baixo para o cálculo do Juros Simples.</p>\n" +
+                        "        <form> "+   
+                        "        <p>Informe o Capital: </p><input type=\"text\" name=\"capital\">" +
+                        "        <p>Informe a Taxa: </p><input type=\"text\" name=\"taxa\">" +
+                        "        <p>Informe o Periodo: </p><input type=\"text\" name=\"periodo\">" +
+                        "        <input class=\"bttbody\" type=\"submit\" name=\"Enviar\">"+
+                        "        </form> " +
                         "      </div>\n" +
                         "    </div>\n" +
                         "  </div>\n" +
                         "  <div class=\"col-sm-6\">\n" +
                         "    <div class=\"card\">\n" +
                         "      <div class=\"card-body\">\n" +
-                        "        <h5 class=\"card-title\">Special title treatment</h5>\n" +
-                        "        <p class=\"card-text\">With supporting text below as a natural lead-in to additional content.</p>\n" +
-                        "        <a href=\"#\" class=\"btn btn-primary\">Go somewhere</a>\n" +
+                        "        <h5 class=\"card-title\">Juros Composto</h5>\n" +
+                        "        <p class=\"card-text\">Digite os dados solicitados a baixo para o cálculo do Juros Composto.</p>\n" +
+                        "        <form> "+   
+                        "        <p>Informe o Capital: </p><input type=\"text\" name=\"capital\">" +
+                        "        <p>Informe a Taxa: </p><input type=\"text\" name=\"taxa\">" +
+                        "        <p>Informe o Periodo: </p><input type=\"text\" name=\"periodo\">" +
+                        "        <input class=\"bttbody\" type=\"submit\" name=\"Enviar\">"+
+                        "        </form> " +        
                         "      </div>\n" +
                         "    </div>\n" +
                         "  </div>\n" +
                         "</div>");
-                    
+                    out.println("<hr><br><br><center><footer>GitHub do Projeto: <a href=\"https://github.com/junioracamargo/projeto02\">Projeto Juros.calc</a></footer></center><br><br>");
                     out.println("<!-- JS Bootstrap -->");
                     out.println("<script src=\"https://code.jquery.com/jquery-3.2.1.slim.min.js\" integrity=\"sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN\" crossorigin=\"anonymous\"></script>");
                     out.println("<script src=\"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js\" integrity=\"sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q\" crossorigin=\"anonymous\"></script>");
