@@ -1,3 +1,44 @@
 .imgdev {
-	width: 40%;
+	width: 150;
+	height: 150;
+	border-style: solid;
+	border-image-width: #000000;
+	padding: 15px;
+}
+
+.navbar {
+	font-family: 'Roboto Slab', serif;
+	font-weight: bold;
+}
+
+.h5body {
+	font-family: 'Roboto Slab', serif;
+	font-weight: bold;
+	font-size: 120%;
+}
+
+.h4body {
+	font-family: 'Roboto Slab', serif;
+	font-weight: bold;
+	font-size: 140%;
+}
+
+.pbody {
+	font-family: 'Roboto Slab', serif;
+}
+
+.footerbody {
+	font-family: 'Roboto Slab', serif;
+	font-size: 120%
+}
+
+.bttbody {
+	font-family: 'Roboto Slab', serif;
+}
+
+.bannerbody {
+	width: 100%;
+	border-style: solid;
+	border-image-width: #000000;
+	padding: 0px;
 }
