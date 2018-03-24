@@ -93,7 +93,7 @@ public class Home extends HttpServlet {
                     out.println(
                         "<div class=\"card-group\">\n" +
                         "  <div class=\"card\">\n" +
-                        "    <center><img class=\"imgdev\" src=\"img/devs/junior.png\" alt=\"foto do desenvolvedor Junior, foto em preto e branco\">\n</center>" +
+                        "    <center><img class=\"rounded-circle imgdev\" src=\"img/devs/junior.png\" alt=\"foto do desenvolvedor Junior, foto em preto e branco\">\n</center>" +
                         "    <div class=\"card-body\">\n" +
                         "      <h5 class=\"card-title h5body\">Junior</h5>\n" +
                         "      <p class=\"card-text pbody\">Aficionado por novas tecnologias, não perde nenhuma WWDC, Google I/O e Build. Curte cerveja e ficção científica.</p>\n" +
@@ -102,16 +102,16 @@ public class Home extends HttpServlet {
                         "    </div>\n" +
                         "  </div>\n" +
                         "  <div class=\"card\">\n" +
-                        "    <center><img class=\"imgdev\" src=\"img/devs/no_img.png\" alt=\"Card image cap\">\n</center>" +
+                        "    <center><img class=\"rounded-circle imgdev\" src=\"img/devs/willians.png\" alt=\"foto do desenvolvedor Willians\">\n</center>" +
                         "    <div class=\"card-body\">\n" +
                         "      <h5 class=\"card-title h5body\">Willians</h5>\n" +
-                        "      <p class=\"card-text pbody\">This card has supporting text below as a natural lead-in to additional content.</p>\n" +
+                        "      <p class=\"card-text pbody\">Se tem cerveja e um projeto, não importa a linguagem!</p>\n" +
                         "      <p class=\"card-text\"><small class=\"text-muted\"><a href=\"https://github.com/wiliansaugusto\" target=\"_blank\">GitHub</a></small></p>\n" +
                         "      <p class=\"card-text\"><small class=\"text-muted\"><a href=\"https://www.linkedin.com/in/willians-tadeu-atan%C3%A1zio-augusto-629791b0\" target=\"_blank\">LinkedIn</a></small></p>\n" +   
                         "    </div>\n" +
                         "  </div>\n" +
                         "  <div class=\"card\">\n" +
-                        "    <center><img class=\"imgdev\" src=\"img/devs/igor.png\" alt=\"foto do desenvolvedor Igor\">\n</center>" +
+                        "    <center><img class=\"rounded-circle imgdev\" src=\"img/devs/igor.png\" alt=\"foto do desenvolvedor Igor\">\n</center>" +
                         "    <div class=\"card-body\">\n" +
                         "      <h5 class=\"card-title h5body\">Igor</h5>\n" +
                         "      <p class=\"card-text pbody\">Apaixonado por Carros, tecnologias e tatuagens. Adora beber qualquer coisa que tenha álcool.</p>\n" +
