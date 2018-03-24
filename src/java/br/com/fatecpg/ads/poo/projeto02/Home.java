@@ -80,7 +80,7 @@ public class Home extends HttpServlet {
                     out.println("<!-- Image caps Bootstrap -->");
                     out.println(
                         "<div class=\"card mb-3\">\n" +
-                        "  <img class=\"card-img-top bannerbody\" src=\"img/banner/dollar_banner.png\" alt=\"crescimento do dinheiro\">\n" +
+                        "  <img class=\"card-img-top bannerbody\" src=\"img/banner/dollar_banner.png\" alt=\"notas de dólar americano enroladas\">\n" +
                         "  <div class=\"card-body\">\n" +
                         "    <h5 class=\"card-title h5body\">Juros.calc</h5>\n" +
                         "    <p class=\"card-text pbody\">O Juros.calc é um site bem esperto feito em Java EE com o objetivo de realizar o cálculo de juros simples e composto. E apesar de parecer e me comportar como uma página HTML, na verdade sou um Servlet! Quer saber mais sobre Servlets? Então <a href=\"https://pt.wikipedia.org/wiki/Servlet\" target=\"_blank\">clica aqui</a>!</p>\n" +
@@ -93,7 +93,7 @@ public class Home extends HttpServlet {
                     out.println(
                         "<div class=\"card-group\">\n" +
                         "  <div class=\"card\">\n" +
-                        "    <center><img class=\"imgdev\" src=\"img/devs/junior.png\" alt=\"foto do desenvolvedor Junior Camargo, foto em preto e branco\">\n</center>" +
+                        "    <center><img class=\"imgdev\" src=\"img/devs/junior.png\" alt=\"foto do desenvolvedor Junior, foto em preto e branco\">\n</center>" +
                         "    <div class=\"card-body\">\n" +
                         "      <h5 class=\"card-title h5body\">Junior</h5>\n" +
                         "      <p class=\"card-text pbody\">Aficionado por novas tecnologias, não perde nenhuma WWDC, Google I/O e Build. Curte cerveja e ficção científica.</p>\n" +
@@ -111,12 +111,12 @@ public class Home extends HttpServlet {
                         "    </div>\n" +
                         "  </div>\n" +
                         "  <div class=\"card\">\n" +
-                        "    <center><img class=\"imgdev\" src=\"img/devs/no_img.png\" alt=\"Card image cap\">\n</center>" +
+                        "    <center><img class=\"imgdev\" src=\"img/devs/igor.png\" alt=\"foto do desenvolvedor Igor\">\n</center>" +
                         "    <div class=\"card-body\">\n" +
                         "      <h5 class=\"card-title h5body\">Igor</h5>\n" +
-                        "      <p class=\"card-text pbody\">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>\n" +
+                        "      <p class=\"card-text pbody\">Apaixonado por Carros, tecnologias e tatuagens. Adora beber qualquer coisa que tenha álcool.</p>\n" +
                         "      <p class=\"card-text\"><small class=\"text-muted\"><a href=\"https://github.com/iitenorio\" target=\"_blank\">GitHub</a></small></p>\n" +
-                        "      <p class=\"card-text\"><small class=\"text-muted\"><a href=\"https://linkedin.com/in/junioracamargo\" target=\"_blank\">LinkedIn</a></small></p>\n" +   
+                        //"      <p class=\"card-text\"><small class=\"text-muted\"><a href=\"https://linkedin.com/in/\" target=\"_blank\">LinkedIn</a></small></p>\n" +   
                         "    </div>\n" +
                         "  </div>\n" +
                         "</div>");
@@ -160,7 +160,10 @@ public class Home extends HttpServlet {
                         "    </div>\n" +
                         "  </div>\n" +
                         "</div></center>");
+
+                    out.println("<!-- Footer -->");
                     out.println("<hr><br><br><center><footer class=\"footerbody\">GitHub do Projeto: <a href=\"https://github.com/junioracamargo/projeto02\">Projeto Juros.calc</a></footer></center><br><br>");
+                    
                     out.println("<!-- JS Bootstrap -->");
                     out.println("<script src=\"https://code.jquery.com/jquery-3.2.1.slim.min.js\" integrity=\"sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN\" crossorigin=\"anonymous\"></script>");
                     out.println("<script src=\"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js\" integrity=\"sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q\" crossorigin=\"anonymous\"></script>");
