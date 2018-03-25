@@ -135,7 +135,7 @@ public class Home extends HttpServlet {
                         "<table>" +
                         "        <tr><td><input class=\"form-control\" type=\"text\" name=\"capital\" placeholder=\"Informe o Capital\"></td></tr>" +
                         "        <tr><td><input class=\"form-control\" type=\"text\" name=\"taxa\" placeholder=\"Informe a Taxa\"></td></tr>" +
-                        "        <tr><td><input class=\"form-control\" type=\"text\" name=\"periodo\" placeholder=\"Informe o Periodo\"></td></tr>" +
+                        "        <tr><td><input class=\"form-control\" type=\"text\" name=\"periodo\" placeholder=\"Informe o Periodo (em meses)\"></td></tr>" +
                         "</table>" +
                         "        <br><input class=\"bttbody btn btn-primary\" type=\"submit\" name=\"enviar\" value=\"Calcular!\">"+
                         "        </form> " +

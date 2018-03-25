@@ -77,8 +77,58 @@ public class JurosSimples extends HttpServlet {
                         "  </div>\n" +
                         "</nav>");
 /* FIM - NAVBAR + CSS */
-            out.println("<h1>Servlet JurosSimples at " + request.getContextPath() + "</h1>");
-            
+/* INICIO - FORMULARIO JUROS SIMPLES */  
+
+                   
+                    out.println("<br><br><!-- Grid markup Bootstrap -->");
+                    out.println(
+                        "  <center><div class=\"col-sm-6\">\n" +
+                        "    <div class=\"card\">\n" +
+                        "      <div class=\"card-body\">\n" +
+                        "        <h5 class=\"card-title h5body\">Juros Simples</h5>\n" +
+                        "        <p class=\"card-text pbody\">Digite os dados solicitados a baixo para o cálculo do Juros Simples.</p>\n" +
+                        "        <form action=\"jurossimples\"> "+
+                        "<table>" +
+                        "        <tr><td><input class=\"form-control\" type=\"text\" name=\"capital\" placeholder=\"Informe o Capital\"></td></tr>" +
+                        "        <tr><td><input class=\"form-control\" type=\"text\" name=\"taxa\" placeholder=\"Informe a Taxa\"></td></tr>" +
+                        "        <tr><td><input class=\"form-control\" type=\"text\" name=\"periodo\" placeholder=\"Periodo (em meses)\"></td></tr>" +
+                        "</table>" +
+                        "        <br><input class=\"bttbody btn btn-primary\" type=\"submit\" name=\"enviar\" value=\"Calcular!\">"+
+                        "        </form> " +
+                        "      </div>\n" +
+                        "    </div>\n" +
+                        "</div></center>");
+/* FIM - FORMULARIO JUROS SIMPLES */
+/* INICIO - CALCULO JUROS SIMPLES */  
+            try{
+                float cap = Float.parseFloat(request.getParameter("capital"));
+                float tax = Float.parseFloat(request.getParameter("taxa"));
+                float per = Float.parseFloat(request.getParameter("periodo"));
+                
+                float montante = (cap * tax * per) - cap;
+                float valorFinal = cap + montante;
+                
+                out.println("<br><center>");
+                out.println(
+                    "  <div class=\"col-sm-6\">\n" +
+                    "    <div class=\"card\">\n" +
+                    "      <div class=\"card-body\">\n" +
+                    "        <h5 class=\"card-title h5body\">Juros Calculado</h5>\n" +
+                    "        <p class=\"card-text pbody\">Informações do calculo realizado</p>\n" +
+                    "      </div>\n" +
+                    "    </div>\n" +
+                    "</div></center>");
+                
+                out.println("<br><center>Valor do Capital: R$" + cap);
+                out.println("<br><center>Valor do Juros: R$" + valorFinal);
+                out.println("<br>Valor Total: R$" + (valorFinal + cap));
+                
+            }catch(Exception ex){
+                out.println("<br><center>Entrar com um valor válido acima.");
+             }
+/* FIM - CALCULO JUROS SIMPLES */ 
+
+/* FIM - JUROS SIMPLES */      
             
             
             
