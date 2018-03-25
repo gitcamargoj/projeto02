@@ -109,7 +109,6 @@ for (count=0; count< qtdparcelas; count++){
         out.println("<h3  class='container  par'>O valor da parcela "+(count+1)+" é do valor de: R$" +display+"</h3>");
     }
     
-    out.println("<h3  class='container divOne'>O valor da parcela "+(count+1)+" é do valor de: R$" +display+"</h3>");
      
 
 }
