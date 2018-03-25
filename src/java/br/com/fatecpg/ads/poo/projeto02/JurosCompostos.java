@@ -16,7 +16,7 @@ import javax.servlet.http.HttpServletResponse;
 
 /**
  *
- * @author tenorio
+ * @author willians
  */
 @WebServlet(name = "JurosCompostos", urlPatterns = {"/juroscomposto"})
 public class JurosCompostos extends HttpServlet {
@@ -34,7 +34,7 @@ public class JurosCompostos extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
-/* INICIO - NAVBAR + CSS */
+        /* INICIO - NAVBAR + CSS */
             out.println("<!DOCTYPE html>");
             out.println("<html lang=\"pt-br\">");
                 out.println("<head>");
@@ -65,65 +65,105 @@ public class JurosCompostos extends HttpServlet {
                         "  </button>\n" +
                         "  <div class=\"collapse navbar-collapse\" id=\"navbarNav\">\n" +
                         "    <ul class=\"navbar-nav\">\n" +
-                        "      <li class=\"nav-item active\">\n" +
+                        "      <li class=\"nav-item\">\n" +
                         "        <a class=\"nav-link\" href=\"home\">Home<span class=\"sr-only\">(current)</span></a>\n" +
                         "      </li>\n" +
                         "      <li class=\"nav-item\">\n" +
                         "        <a class=\"nav-link\" href=\"jurossimples\">Juros Simples</a>\n" +
                         "      </li>\n" +
-                        "      <li class=\"nav-item\">\n" +
+                        "      <li class=\"nav-item active\">\n" +
                         "        <a class=\"nav-link\" href=\"juroscomposto\">Juros Composto</a>\n" +
                         "      </li>\n" +
                         "    </ul>\n" +
                         "  </div>\n" +
                         "</nav>");
-/* FIM - NAVBAR + CSS */
+        /* FIM - NAVBAR + CSS */
 
+        /* INICIO - FORMULARIO JUROS COMPOSTO */  
 
-            try {
-int qtdparcelas = Integer.parseInt(request.getParameter("periodo"));
-float txjuros = (Float.parseFloat(request.getParameter("taxa")));
-float investimento = Float.parseFloat(request.getParameter("capital" ));
-float investimentoInicial = investimento;
+                    out.println("<br><br><!-- Grid markup Bootstrap -->");
+                    out.println(
+                        "  <center><div class=\"col-sm-6\">\n" +
+                        "    <div class=\"card\">\n" +
+                        "      <div class=\"card-body\">\n" +
+                        "        <h5 class=\"card-title h5body\">Juros Composto</h5>\n" +
+                        "        <p class=\"card-text pbody\">Digite os dados solicitados a baixo para o cálculo do Juros Composto.</p>\n" +
+                        "        <form action=\"juroscomposto\"> "+
+                        "<table>" +
+                        "        <tr><td><input class=\"form-control\" type=\"text\" name=\"capital\" placeholder=\"Informe o Capital\"></td></tr>" +
+                        "        <tr><td><input class=\"form-control\" type=\"text\" name=\"taxa\" placeholder=\"Informe a Taxa\"></td></tr>" +
+                        "        <tr><td><input class=\"form-control\" type=\"text\" name=\"periodo\" placeholder=\"Periodo (em meses)\"></td></tr>" +
+                        "</table>" +
+                        "        <br><input class=\"bttbody btn btn-primary\" type=\"submit\" name=\"enviar\" value=\"Calcular!\">"+
+                        "        </form> " +
+                        "      </div>\n" +
+                        "    </div>\n" +
+                        "</div></center>");
+        /* FIM - FORMULARIO JUROS COMPOSTO */
 
-DecimalFormat formatter = new DecimalFormat("#.00");
-int count;      
-     out.println("<div class='container divOne'><h2>O investivento inicial foi de: "+investimentoInicial+"</h2>"
-     +"<h2>Com uma taxa de juros de: "+(txjuros)+" %</h2>"
-     +"<h2>em um periodo de: "+qtdparcelas+"</div ></h2>");
-     txjuros= txjuros/100;
-     String display = formatter.format(investimento);
-     out.println("<button class=\"btn btn-primary botao\" type=\"button\" data-toggle=\"collapse\" data-target=\"#collapseExample\" aria-expanded=\"false\" aria-controls=\"collapseExample\">\n" +
-"    Expandir as parcelas" +
-"  </button>");
-     out.println("<div class=\"collapse \" id=\"collapseExample\">\n" +
-"  <div class=\"card card-body\">");
-for (count=0; count< qtdparcelas; count++){
-    investimento=investimento+(investimento*txjuros);
-    display= formatter.format(investimento);  
+        try {
+            int qtdparcelas = Integer.parseInt(request.getParameter("periodo"));
+            float txjuros = (Float.parseFloat(request.getParameter("taxa")));
+            float investimento = Float.parseFloat(request.getParameter("capital" ));
+            float investimentoInicial = investimento;
 
-    if (count % 2 == 0){
-        out.println("<h3  class='container  impar'>O valor da parcela "+(count+1)+" é do valor de: R$" +display+"</h3>");
-        
-    }else{
-        out.println("<h3  class='container  par'>O valor da parcela "+(count+1)+" é do valor de: R$" +display+"</h3>");
-    }
-    
-     
-
-}
-out.println("</ div>");
-out.println("</div>");
-} catch (Exception e) {
-    
-    out.println("<div class=\"container divOne\"><h4>Os dados estão inconcistentes</h4>"
-            + "<h4>Por favor usarem pontos ao inves de virgula</h4>"
-            + "<h4>Usarem numeros inteiros ao informar a quantidades de parcelas</h4>"
-            + "<h4>Obrigado</h4>"
-            + "<button type='button' class='btn btn-outline-primary'><a href='home'>Voltar</a></button></div>"  );
-            }
+            DecimalFormat formatter = new DecimalFormat("#.00");
             
+            int count;
             
+            String converteInvestInic = formatter.format(investimentoInicial);
+            
+            out.println("<br><center>");
+                out.println(
+                    "  <div class=\"col-sm-6\">\n" +
+                    "    <div class=\"card\">\n" +
+                    "      <div class=\"card-body\">\n" +
+                    "        <h5 class=\"card-title h5body\">Juros Calculado</h5>\n" +
+                    "        <p class=\"card-text pbody\">Informações do calculo realizado</p>\n" +
+                    "        <p class=\"card-text pbody\">Emprestimo inicial de R$: "+converteInvestInic+"</p>\n" +
+                    "        <p class=\"card-text pbody\">Com uma taxa de juros de "+(txjuros)+"% ao mês</p>\n");
+                
+                    if (txjuros == 1) out.println("<p class=\"card-text pbody\">Informações do calculo realizado</p>\n");
+                    else out.println("<p class=\"card-text pbody\">em um periodo de "+qtdparcelas+" meses</p>\n");
+                                     
+            txjuros= txjuros/100;
+            
+            String display = formatter.format(investimento);
+            
+            out.println("<center><div><button class=\"btn btn-primary btn-lg btn-block bttbody\" type=\"button\" data-toggle=\"collapse\" data-target=\"#collapseExample\" aria-expanded=\"false\" aria-controls=\"collapseExample\">\n" +
+            "Expandir Parcela(s)" +
+            "</button></div></center>");
+            out.println("<div class=\"collapse \" id=\"collapseExample\">\n" +
+            "<div class=\"card card-body\">");
+            
+            out.println("<div class=\"container\"><center><table class=\"table\">"); 
+                out.println("<thead class=\"thead-dark\"><tr>");
+                out.println("<th scope=\"col\"> <center>Mês</center </th><th scope=\"col\"> <center>Valor da Parcela</center> </th>");
+                out.println("</tr></thead>");
+                for (count=0; count< qtdparcelas; count++){
+                    investimento=investimento+(investimento*txjuros);
+                    display = formatter.format(investimento);  
+                    
+                    if (count % 2 == 0) out.println("<tbody><tr class='container  impar'><td>"+(count+1)+"</td><td>R$ "+display+"</td></tr>");
+                    else out.println("<tr class='container  par'><td>"+(count+1)+"</td><td>R$ "+display+"</td></tr></tbody>");
+
+                }
+            out.println("</table></center><div class=\"container\">");
+            
+            out.println("</ div>");
+            out.println("</div>");
+
+            } catch (Exception e) {
+
+                out.println("<div class=\"container divOne\"><h4 class=\"h4body\">Dados inconsistentes</h4>"
+                        + "<h4 class=\"h4body\">Por favor, usar pontos ao inves de vírgula</h4>"
+                        + "<h4 class=\"h4body\">Use números inteiros ao informar a quantidade de parcelas</h4>"
+                        + "<h4 class=\"h4body\">Obrigado</h4>");
+                        }
+            
+                out.println("      </div>\n");
+                out.println("    </div>\n");
+                out.println("</div></center>");
             
 /* INICIO - FOOTER */            
 	    out.println("<!-- Footer -->");
