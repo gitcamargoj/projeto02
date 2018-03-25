@@ -84,24 +84,31 @@ public class JurosCompostos extends HttpServlet {
 int qtdparcelas = Integer.parseInt(request.getParameter("periodo"));
 float txjuros = (Float.parseFloat(request.getParameter("taxa")));
 float investimento = Float.parseFloat(request.getParameter("capital" ));
-txjuros= txjuros/100;
 float investimentoInicial = investimento;
 
 DecimalFormat formatter = new DecimalFormat("#.00");
 int count;      
-     out.println("<h2>O investivento inicial foi de: "+investimentoInicial+"</h2>"
-     +"<h3>Com uma taxa de juros de: "+(txjuros)+"</h3>"
-     +"<h3>em um periodo de: "+qtdparcelas+"</h3>");
-     
+     out.println("<div class='container divOne'><h2>O investivento inicial foi de: "+investimentoInicial+"</h2>"
+     +"<h2>Com uma taxa de juros de: "+(txjuros)+" %</h2>"
+     +"<h2>em um periodo de: "+qtdparcelas+"</div ></h2>");
+     txjuros= txjuros/100;
+     String display = formatter.format(investimento);
+     out.println("<button class=\"btn btn-primary botao\" type=\"button\" data-toggle=\"collapse\" data-target=\"#collapseExample\" aria-expanded=\"false\" aria-controls=\"collapseExample\">\n" +
+"    Expandir as parcelas" +
+"  </button>");
+     out.println("<div class=\"collapse \" id=\"collapseExample\">\n" +
+"  <div class=\"card card-body\">");
 for (count=0; count< qtdparcelas; count++){
     investimento=investimento+(investimento*txjuros);
-    String display= formatter.format(investimento);  
+    display= formatter.format(investimento);  
 
     
-    out.println("<h3>O valor da parecela "+(count+1)+" é do valor de: " +display+"</h3>");
-    
+    out.println("<h3  class='container divOne'>O valor da parcela "+(count+1)+" é do valor de: R$" +display+"</h3>");
+     
 
 }
+out.println("</ div>");
+out.println("</div>");
 } catch (Exception e) {
     
     out.println("<div class=\"container divOne\"><h4>Os dados estão inconcistentes</h4>"
@@ -177,4 +184,5 @@ for (count=0; count< qtdparcelas; count++){
 
 
 }
+
 
