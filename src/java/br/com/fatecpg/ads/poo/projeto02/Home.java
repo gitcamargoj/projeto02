@@ -133,9 +133,9 @@ public class Home extends HttpServlet {
                         "        <p class=\"card-text pbody\">Digite os dados solicitados a baixo para o cálculo do Juros Simples.</p>\n" +
                         "        <form action=\"jurossimples\"> "+
                         "<table>" +
-                        "        <tr><td><input class=\"form-control\" type=\"text\" name=\"capital\" placeholder=\"Informe o Capital\"></td></tr>" +
-                        "        <tr><td><input class=\"form-control\" type=\"text\" name=\"taxa\" placeholder=\"Informe a Taxa\"></td></tr>" +
-                        "        <tr><td><input class=\"form-control\" type=\"text\" name=\"periodo\" placeholder=\"Informe o Periodo (em meses)\"></td></tr>" +
+                        "        <tr><td><input class=\"form-control\" type=\"text\" name=\"capital\" placeholder=\"Capital (montante)\"></td></tr>" +
+                        "        <tr><td><input class=\"form-control\" type=\"text\" name=\"taxa\" placeholder=\"Taxa (em decimal)\"></td></tr>" +
+                        "        <tr><td><input class=\"form-control\" type=\"text\" name=\"periodo\" placeholder=\"Periodo (em meses)\"></td></tr>" +
                         "</table>" +
                         "        <br><input class=\"bttbody btn btn-primary\" type=\"submit\" name=\"enviar\" value=\"Calcular!\">"+
                         "        </form> " +
@@ -150,9 +150,9 @@ public class Home extends HttpServlet {
                         "        <form action=\"juroscomposto\"> "+   
                         "<table>" +
                         "" +        
-                        "        <tr><td><input class=\"form-control\" type=\"text\" name=\"capital\" placeholder=\"Informe o Capital\"></td></tr>" +
-                        "        <tr><td><input class=\"form-control\" type=\"text\" name=\"taxa\" placeholder=\"Informe a Taxa\"></td></tr>" +
-                        "        <tr><td><input class=\"form-control\" type=\"text\" name=\"periodo\" placeholder=\"Informe o Periodo\"></td></tr>" +
+                        "        <tr><td><input class=\"form-control\" type=\"text\" name=\"capital\" placeholder=\"Capital (montante\"></td></tr>" +
+                        "        <tr><td><input class=\"form-control\" type=\"text\" name=\"taxa\" placeholder=\"Taxa (em decimal)\"></td></tr>" +
+                        "        <tr><td><input class=\"form-control\" type=\"text\" name=\"periodo\" placeholder=\"Periodo (em meses)\"></td></tr>" +
                         "</table>" +
                         "        <br><input class=\"bttbody btn btn-primary\" type=\"submit\" name=\"enviar\" value=\"Calcular!\">"+
                         "        </form> " +        
