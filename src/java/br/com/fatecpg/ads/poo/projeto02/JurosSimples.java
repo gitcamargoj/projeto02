@@ -7,6 +7,7 @@ package br.com.fatecpg.ads.poo.projeto02;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.text.DecimalFormat;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -121,12 +122,18 @@ public class JurosSimples extends HttpServlet {
                     "    </div>\n" +
                     "</div></center>");
                 
-                out.println("<br><center>Valor do Capital: R$" + cap);
-                out.println("<br><center>Valor do Juros: R$" + valorFinal);
-                out.println("<br>Valor Total: R$" + (valorFinal + cap));
+                DecimalFormat formatter = new DecimalFormat("#.00");
+                String converteCap = formatter.format(cap);
+                String converteValorFinal = formatter.format(valorFinal);
+                float total = (valorFinal + cap);
+                String converteTotal = formatter.format(total);
+                
+                out.println("<br><center>Valor do Capital: R$ " + converteCap);
+                out.println("<br><center>Valor do Juros: R$ " + converteValorFinal);
+                out.println("<br>Valor Total: R$ " + (converteTotal));
                 
             }catch(Exception ex){
-                out.println("<br><center>Entrar com um valor válido acima.");
+                out.println("<br><center><p class=\"pbody\">Entrar com um valor válido acima.</p>");
              }
 /* FIM - CALCULO JUROS SIMPLES */ 
 

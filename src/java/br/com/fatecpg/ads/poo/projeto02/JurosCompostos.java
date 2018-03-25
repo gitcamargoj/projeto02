@@ -155,10 +155,10 @@ public class JurosCompostos extends HttpServlet {
 
             } catch (Exception e) {
 
-                out.println("<div class=\"container divOne\"><h4 class=\"h4body\">Dados inconsistentes</h4>"
-                        + "<h4 class=\"h4body\">Por favor, usar pontos ao inves de vírgula</h4>"
-                        + "<h4 class=\"h4body\">Use números inteiros ao informar a quantidade de parcelas</h4>"
-                        + "<h4 class=\"h4body\">Obrigado</h4>");
+                out.println("<div class=\"container divOne\"><center><p class=\"pbody\">Dados inconsistentes</p>"
+                        + "<p class=\"pbody\">Por favor, usar pontos ao inves de vírgula</p>"
+                        + "<p class=\"pbody\">Use números inteiros ao informar a quantidade de parcelas</p>"
+                        + "<p class=\"pbody\">Obrigado</p></center>");
                         }
             
                 out.println("      </div>\n");
