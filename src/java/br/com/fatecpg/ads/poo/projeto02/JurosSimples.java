@@ -64,10 +64,10 @@ public class JurosSimples extends HttpServlet {
                         "  </button>\n" +
                         "  <div class=\"collapse navbar-collapse\" id=\"navbarNav\">\n" +
                         "    <ul class=\"navbar-nav\">\n" +
-                        "      <li class=\"nav-item\">\n" +
+                        "      <li class=\"nav-item active\">\n" +
                         "        <a class=\"nav-link\" href=\"home\">Home<span class=\"sr-only\">(current)</span></a>\n" +
                         "      </li>\n" +
-                        "      <li class=\"nav-item active\">\n" +
+                        "      <li class=\"nav-item\">\n" +
                         "        <a class=\"nav-link\" href=\"jurossimples\">Juros Simples</a>\n" +
                         "      </li>\n" +
                         "      <li class=\"nav-item\">\n" +
