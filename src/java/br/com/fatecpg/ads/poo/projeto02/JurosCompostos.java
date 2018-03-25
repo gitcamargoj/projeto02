@@ -102,9 +102,12 @@ for (count=0; count< qtdparcelas; count++){
     investimento=investimento+(investimento*txjuros);
     display= formatter.format(investimento);  
 
-    
-    out.println("<h3  class='container divOne'>O valor da parcela "+(count+1)+" é do valor de: R$" +display+"</h3>");
-     
+    if (count % 2 == 0){
+        out.println("<h3  class='container  impar'>O valor da parcela "+(count+1)+" é do valor de: R$" +display+"</h3>");
+        
+    }else{
+        out.println("<h3  class='container  par'>O valor da parcela "+(count+1)+" é do valor de: R$" +display+"</h3>");
+    }
 
 }
 out.println("</ div>");
